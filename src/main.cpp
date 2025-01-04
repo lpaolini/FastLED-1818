@@ -1,5 +1,7 @@
 
 #define FASTLED_USES_OBJECTFLED
+#define FASTLED_OVERCLOCK 1.2
+
 #include <FastLED.h>
 #include <Audio.h>
 
@@ -7,7 +9,7 @@
 #define NUM_LEDS 192
 
 CRGB leds[NUM_LEDS];
-// AudioInputI2S audioInput;
+AudioInputI2S audioInput;
 
 void setup() {
     FastLED.addLeds<WS2812, PIN, GRB>(leds, NUM_LEDS);
